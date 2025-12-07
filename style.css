@@ -1,0 +1,220 @@
+        /* Configuraçoes de estilo gerais */
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        :root{
+            --cor00: #2C2F36;
+            --cor01: #171719;
+            --cor02:#E9E4DE;
+            --cor03:#26282F;
+        }
+
+        body{
+            background-color: var(--cor00);
+        }
+/*________________________________________________________________________________________________________*/
+
+        /*Configuraçoes de estilo do topo da pagina*/
+        header{
+            width: 100vw;
+            background-color: var(--cor01);
+            padding: 15px;
+            position:fixed;   /*deixar o cabeçalho aparecendo na pagina toda*/
+            top: 0;
+        }
+            /*icones do cabeçalho da pagina */
+        ul,nav{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        nav{
+            justify-content: space-between
+        }
+
+        ul{
+            margin: 10px 30px;
+        }
+        li{
+            margin: 0px 10px;
+            list-style-type: none;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+        }
+        #acesso{
+            margin-right: 65px;
+        }
+        #categoria{
+            margin-left: 244px;
+        }
+        header a{
+            text-decoration: none;
+            color: white;
+        }
+        header a:hover{
+            text-decoration: underline;
+        }
+
+        /*Botoes de login e singup */
+        #singup>a{
+            padding: 10px 20px;
+            border-radius: 5px;
+            border: 2px solid white;
+        }
+
+        #login>a{
+            background-color: red;
+            padding: 12px 22px;
+            border-radius: 5px;
+        }
+
+         #singup>a:hover{
+            background-color: var(--cor00);
+            border: 2px solid black;
+            text-decoration: none;
+        }
+
+        #login>a:hover{
+            background-color: rgb(175, 0, 0);
+            text-decoration: none;
+            border: 2px solid black;
+            padding: 12px 20px;
+        }
+/*________________________________________________________________________________________________________*/
+
+        /*section do banner */
+        #banner{
+            padding-top: 30px;
+            display: block;
+            width: 60%;
+            height: 320px;
+            margin: auto;
+            margin-top: 100px;
+            margin-bottom: 50px;
+            border-radius: 10px;
+            background-color: var(--cor02);
+        }
+
+        #pesquisa{
+            width: 50%;
+            height: 50px;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            background-color: white;
+            border-radius: 5px;
+        }
+        #pesquisa>label>img{
+            width: 30px;
+            margin-top: 5px;
+            margin-right: 10px;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+        #ipesquisar{
+            height: 25px;
+            width: 80%;
+            border: none;
+        }
+        #ipesquisar:focus{
+            outline: none;
+            border: none;
+        }
+            
+/*________________________________________________________________________________________________________*/
+
+        /*-----------------Configuraçoes do estilo do conteudo principal do site-----------------*/
+
+        /*Estilo do texto de cada seçao e do botao de ver mais*/
+
+        main{
+            width: 100%;
+            height: 100dvh;
+        }
+
+        main>div{
+            margin-bottom: 60px;
+        }
+
+        main h2{
+            font-family: Arial, Helvetica, sans-serif;
+            color: white;
+            text-align: left;
+            margin: 15px 6%;
+        }
+
+        main hr{
+            width: 90%;
+            margin: 20px auto;
+            border: 0.5px solid #41474b;
+        }
+
+        .nomes{
+            width: 90%;
+            display: flex;
+            justify-content:space-between;
+            align-items: baseline;
+        }
+        .nomes>p>a{
+            text-decoration: none;
+            color: white;
+        }
+        .nomes>p>a:hover{
+            text-decoration: none;
+            color: rgb(170, 170, 170);
+        }
+
+        /*configuraçao da visualizaçao do conteudo em si */
+
+        main .conteudo{
+            width: 300px;
+            height: 150px;
+            background-color: var(--cor02);
+            margin: 0px 10px;
+        }
+        .classconteudo{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+/*________________________________________________________________________________________________________*/
+        /*Botao topo*/
+        #botaotop{
+            position:fixed;
+            left: 90%;
+            top: 90%;
+        }
+        #botaotop>img{
+            width: 50px;
+        }
+
+/*________________________________________________________________________________________________________*/
+        /*Iframe de Login e cadastro*/
+        #iframelogin{
+            display: none;
+            border: 1px solid white;
+            border-radius: 20px;
+            width: 370px;
+            height: 325px;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        #iframecadastro{
+            display: none;
+            border: 1px solid white;
+            border-radius: 20px;
+            width: 370px;
+            height: 340px;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
