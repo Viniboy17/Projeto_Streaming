@@ -1,36 +1,32 @@
 
-@media screen and (orientation: portrait){
+#banner{
+    width: 100%;
+    border-radius: 0px;
+    margin-top: 140px;
+}
 
-    #banner{
-        width: 100%;
-        border-radius: 0px;
-        margin-top: 140px;
-    }
+#pesquisa{
+    width: 80%;
+}
 
-    #pesquisa{
-        width: 80%;
-    }
+#botaotop{
+    left: 85%;
+}
+nav{
+    justify-content: baseline;
+    flex-wrap: wrap;
+}
+nav>img{
+    margin-right: 30px;
+}
 
-    #botaotop{
-        left: 85%;
-    }
-    nav{
-        justify-content: baseline;
-        flex-wrap: wrap;
-    }
-    nav>img{
-        margin-right: 30px;
-    }
-
-    #categoria{
-        order: 1;
-        margin-top: 30px;
-        margin-left: 0px;
-        width: 100%;
-    }
-    #acesso{
-        width: 75%;
-        margin: 0px;
-    }
-
+#categoria{
+    order: 1;
+    margin-top: 30px;
+    margin-left: 0px;
+    width: 100%;
+}
+#acesso{
+    width: 75%;
+    margin: 0px;
 }

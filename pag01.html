@@ -8,16 +8,6 @@
     <link rel="stylesheet" href="style.css" media="all">
     <link rel="stylesheet" href="retrato.css" media="screen and (orientation: portrait)">
     <link rel="stylesheet" href="paisagem.css" media="screen and (orientation: landscape)">
-   
-    <script>
-        document.getElementById("botaotop").addEventListener("click", function(e){
-            e.preventDefault(); // impede o # de recarregar a página
-            window.scrollTo({
-                top: 0,
-                behavior: "smooth"
-            });
-        });
-    </script>
 </head>
 <body>
     <!-- Cabeçalho da Pagina contendo o icone do site, os botos rapidos-->
@@ -111,5 +101,16 @@
 
     <!--Iframe de cadastro-->
     <iframe src="cadastro.html" frameborder="0" id="iframecadastro"></iframe>
+
+
+    <script>
+        document.getElementById("botaotop").addEventListener("click", function(e){
+            e.preventDefault(); // impede o # de recarregar a página
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+    </script>
 </body>
 </html>
