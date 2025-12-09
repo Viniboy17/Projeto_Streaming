@@ -1,27 +1,29 @@
-#botaotop{
-    left: 90%;
-    top: 80%;
-}
+@media screen and (max-width: 600px){
+    #botaotop{
+        left: 90%;
+        top: 80%;
+    }
 
-#banner{
-    width: 100%;
-    border-radius: 0px;
-    margin-top: 92px;
-}
+    #banner{
+        width: 100%;
+        border-radius: 0px;
+        margin-top: 92px;
+    }
 
-#pesquisa{
-    width: 80%;
-}
+    #pesquisa{
+        width: 80%;
+    }
 
-nav{
-    justify-content: space-between;
-    width: 97%;
-}
+    nav{
+        justify-content: space-between;
+        width: 97%;
+    }
 
-#categoria{
-    margin-left: 55px;
-}
+    #categoria{
+        margin-left: 55px;
+    }
 
-#acesso{
-    margin-right: 0px;
+    #acesso{
+        margin-right: 0px;
+    }
 }
