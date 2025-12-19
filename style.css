@@ -211,6 +211,11 @@ main .conteudo{
 #contpesquisado>.conteudo>img{
     width: 100%;
 }
+#contpesquisado>.conteudo>h2{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    font-weight: 100;
+}
 
 /*________________________________________________________________________________________________________*/
 /*Botao topo*/
