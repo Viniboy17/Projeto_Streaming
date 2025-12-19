@@ -74,6 +74,7 @@ header a:hover{
     background-color: var(--cor00);
     border: 2px solid black;
     text-decoration: none;
+    cursor: pointer;
 }
 
 #login>a:hover{
@@ -81,6 +82,7 @@ header a:hover{
     text-decoration: none;
     border: 2px solid black;
     padding: 12px 20px;
+    cursor: pointer;
 }
 /*________________________________________________________________________________________________________*/
 
@@ -271,11 +273,7 @@ input{
     height: 25px;
     padding: 5px;
     border-radius: 5px;
-}
-
-input:focus{
     outline: none;
-    border: none;
 }
 
 #log1{
