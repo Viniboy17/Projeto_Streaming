@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pag01</title>
+    <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="retrato.css">
+    <link rel="stylesheet" href="paisagem.css">
+</head>
+<body>
+    <!-- Cabeçalho da Pagina contendo o icone do site, os botos rapidos-->
+    <header>
+        <nav>
+            <img src="imagens/favicon.ico" alt="filmes Driver">
+            <ul type="none" id="categoria">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">filmes</a></li>
+                <li><a href="#">series</a></li>
+                <li><a href="#">Categorias</a></li>
+            </ul>
+            <ul id="acesso">
+                <li id="singup"><a onclick="clicksingup()">Singup</a></li>
+                <li id="login"><a onclick="clicklogin()">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Parte onde vai ficar passando os banes de alguns filmes-->
+    <section id="banner">
+            <form id="pesquisa">
+                <label for="ipesquisar"><button><img src="imagens/lupa.png" alt=""></button></label>
+                <input type="text" name="pesquisar" id="ipesquisar" placeholder="pesquisar">
+            </form>
+    </section>
+
+    <!--Conteudo principal do site-->
+    <main>
+        <div id="no_cinema">
+            <div class="nomes">
+                <h2>No Cinema</h2>
+                <p><a href="#">Ver Mais</a></p>
+            </div>
+            <hr>
+            <div class="classconteudo">
+                <div class="conteudo"></div>
+                <div class="conteudo"></div>
+                <div class="conteudo"></div>
+            </div>
+        </div>
+        
+        <div id="top_filmes">
+            <div class="nomes">
+                <h2>Top Filmes</h2>
+                <p><a href="#">Ver Mais</a></p>
+            </div>
+            <hr>
+            <div class="classconteudo">
+                <div class="conteudo"></div>
+                <div class="conteudo"></div>
+                <div class="conteudo"></div>
+            </div>
+        </div>
+       
+        <div id="top_series">
+            <div class="nomes">
+                <h2>Top Series</h2>
+                <p><a href="#">Ver Mais</a></p>
+            </div>
+            <hr>
+            <div class="classconteudo">
+                <div class="conteudo"></div>
+                <div class="conteudo"></div>
+                <div class="conteudo"></div>
+            </div>
+        </div>
+        
+        <div id="top_animes">
+            <div class="nomes">
+                <h2>Animes Populares</h2>
+                <p><a href="#">Ver Mais</a></p>
+            </div>
+            <hr>
+            <div class="classconteudo">
+                <div class="conteudo"></div>
+                <div class="conteudo"></div>
+                <div class="conteudo"></div>
+            </div>
+        </div>
+        <br>
+
+    </main>
+
+    <!--Conteudo pesquisado-->
+    <div id="contpesquisado"></div>
+
+
+
+    <!-- Botao para voltar ao topo da pagina-->
+    <a href="#" id="botaotop">
+        <img src="imagens/de-volta-ao-topo.png" alt="">
+    </a>
+
+    <!--Pagina de cadastro-->
+    <div class="cadastro" id="pagsingup">
+        <fieldset>
+            <legend><h1>Cadastre-se</h1></legend>
+            <img src="imagens/botao-x.png" alt="X" onclick="fechar()" id="xfechar">
+            <label for="iemail">E-mail</label><br>
+            <input type="email" id="iemail">
+            <br><br>
+            <label for="inome">Nome</label><br>
+            <input type="text" name="nome" id="inome">
+            <br><br>
+            <label for="isenha">Senha</label><br>
+            <input type="password" id="isenha">
+            <label for="ibotcadastro" id="log1">Cadastrar</label>
+            <input type="submit" value="" id="ibotcadastro">
+        </fieldset>
+    </div>
+    
+    <div class="cadastro" id="paglogin">
+        <fieldset>
+            <legend><h1>Login</h1></legend>
+            <img src="imagens/botao-x.png" alt="X" onclick="fechar()" id="xfechar">
+            <label for="iemail">E-mail</label><br>
+            <input type="email" id="iemail">
+            <br><br>
+            <label for="isenha">Senha</label><br>
+            <input type="password" id="isenha">
+            <label for="botlogin" id="log2">Login</label>
+            <input type="submit" value="" id="botlogin">
+        </fieldset>
+    </div>
+    
+    <script>
+        document.getElementById("botaotop").addEventListener("click", function(e){
+            e.preventDefault(); // impede o # de recarregar a página
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+
+        const pagsingup = document.getElementById("pagsingup");
+        const paglogin = document.getElementById("paglogin");
+        const xfechar = document.getElementById("xfechar");
+        function clicksingup() {
+
+            if (pagsingup.style.display === 'block') {
+                pagsingup.style.display = 'none';
+            } 
+            else {
+                pagsingup.style.display = 'block';
+                paglogin.style.display = 'none';
+            }
+        }
+
+        function clicklogin() {
+
+            if (paglogin.style.display === 'block') {
+                paglogin.style.display = 'none';
+            } else {
+                paglogin.style.display = 'block';
+                pagsingup.style.display = 'none';
+            }
+        }
+
+        function fechar() {
+            pagsingup.style.display = 'none';
+            paglogin.style.display = 'none';
+        }
+
+        /* ------------------------------Pesquisa do filme------------------------------------------- */
+        const apikey = '86afa933'
+        const frmpesquisa = document.getElementById("pesquisa")
+
+        frmpesquisa.onsubmit = (ev) =>{
+            ev.preventDefault()
+
+            const pesquisa = ev.target.pesquisar.value.trim()
+
+            if(pesquisa ===""){
+                alert('Preencha o campo!')
+                return
+            }
+
+        /*localiza dados do filme/pesquisa na api */
+        fetch(`https://www.omdbapi.com/?apikey=${apikey}&s=${pesquisa}`)
+            .then(result => result.json())
+            .then(json => {
+                if (json.Response === "False") {
+                    alert("Nenhum filme encontrado!")
+                    return
+                }
+                carregalista(json)
+            })
+            .catch(err => console.error(err))
+        }
+        /*mostra na tela o que pesquisou*/
+        const carregalista = (json) =>{
+            const lista = document.getElementById("contpesquisado")
+            const main = document.querySelector("main")
+            main.style.display = 'none'
+
+            if(json.Response == 'False'){
+                alert('Nenhum filme encontrado :(')
+                return
+            }
+
+            json.Search.forEach(element =>{
+                let item = document.createElement("div")
+                item.classList.add("conteudo")
+
+                item.innerHTML =`
+                <img src="${element.Poster !== "N/A" ? element.Poster : "back"}">
+                <h2>${element.Title}<h2> 
+                `
+                lista.appendChild(item)
+            })
+        }
+
+
+    </script>
+</body>
+</html>
