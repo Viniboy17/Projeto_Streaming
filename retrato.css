@@ -32,15 +32,23 @@ nav>img{
     margin: 0px;
 }
 
-#contpesquisado{
-
+.cadastro{
+    width: 337px;
 }
+
+.cadastro>fieldset{
+    width: 225px;
+}
+
+main .conteudo{
+    width: 136px;
+    height: 200px;
+    margin: 0px;
+}
+
 #contpesquisado>.conteudo{
 width: 137px;
 margin: 5px;
 }
-#contpesquisado>.conteudo>img{
-}
-
 
 }
