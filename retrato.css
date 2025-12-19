@@ -47,8 +47,9 @@ main .conteudo{
 }
 
 #contpesquisado>.conteudo{
-width: 137px;
-margin: 5px;
+width: 147px;
+height: 275;
+margin: 0px;
 }
 
 }
