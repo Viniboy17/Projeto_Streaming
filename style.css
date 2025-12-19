@@ -224,7 +224,7 @@ main .conteudo{
 }
 
 /*________________________________________________________________________________________________________*/
-    /*Iframe de Login e cadastro*/
+    /* Login e cadastro*/
 .cadastro{
     background-color: var(--cor01);
     position: fixed;

@@ -212,6 +212,8 @@
             const main = document.querySelector("main") //meu query main tem que sumir para aparecer a div
             main.style.display = 'none'
 
+            lista.innerHTML=""
+
             if(json.Response == 'False'){
                 alert('Nenhum filme encontrado :(')
                 return
