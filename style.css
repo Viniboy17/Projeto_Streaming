@@ -217,6 +217,10 @@ main .conteudo{
     font-weight: 100;
 }
 
+#contpesquisado>.conteudo:hover{
+    background-color: #26282F;
+}
+
 /*________________________________________________________________________________________________________*/
 /*Botao topo*/
 #botaotop{

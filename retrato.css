@@ -1,55 +1,54 @@
 @media screen and (max-width: 600px){
-#banner{
-    width: 100%;
-    height: 40vh;
-    border-radius: 0px;
-    margin-top: 140px;
-}
+    #banner{
+        width: 100%;
+        height: 40vh;
+        border-radius: 0px;
+        margin-top: 140px;
+    }
 
-#pesquisa{
-    width: 80%;
-}
+    #pesquisa{
+        width: 80%;
+    }
 
-#botaotop{
-    left: 85%;
-}
-nav{
-    justify-content: baseline;
-    flex-wrap: wrap;
-}
-nav>img{
-    margin-right: 30px;
-}
+    #botaotop{
+        left: 85%;
+    }
+    nav{
+        justify-content: baseline;
+        flex-wrap: wrap;
+    }
+    nav>img{
+        margin-right: 30px;
+    }
 
-#categoria{
-    order: 1;
-    margin-top: 30px;
-    margin-left: 0px;
-    width: 100%;
-}
-#acesso{
-    width: 75%;
+    #categoria{
+        order: 1;
+        margin-top: 30px;
+        margin-left: 0px;
+        width: 100%;
+    }
+    #acesso{
+        width: 75%;
+        margin: 0px;
+    }
+
+    .cadastro{
+        width: 337px;
+    }
+
+    .cadastro>fieldset{
+        width: 225px;
+    }
+
+    main .conteudo{
+        width: 136px;
+        height: 200px;
+        margin: 0px;
+    }
+
+    #contpesquisado>.conteudo{
+    width: 147px;
+    height: 275px;
     margin: 0px;
-}
-
-.cadastro{
-    width: 337px;
-}
-
-.cadastro>fieldset{
-    width: 225px;
-}
-
-main .conteudo{
-    width: 136px;
-    height: 200px;
-    margin: 0px;
-}
-
-#contpesquisado>.conteudo{
-width: 147px;
-height: 275;
-margin: 0px;
-}
-
+    }
 }
