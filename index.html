@@ -135,6 +135,7 @@
     </div>
     
     <script>
+        //Botao no canto do tela para subir ao topo
         document.getElementById("botaotop").addEventListener("click", function(e){
             e.preventDefault(); // impede o # de recarregar a página
             window.scrollTo({
@@ -143,9 +144,12 @@
             });
         });
 
+        /*-----------------------Funcionalidade para aparecer e fechar a pagina de login e singup----------------*/
         const pagsingup = document.getElementById("pagsingup");
         const paglogin = document.getElementById("paglogin");
         const xfechar = document.getElementById("xfechar");
+
+        //aparecer pagina de singup
         function clicksingup() {
 
             if (pagsingup.style.display === 'block') {
@@ -157,6 +161,7 @@
             }
         }
 
+        //aparecer pagina de login
         function clicklogin() {
 
             if (paglogin.style.display === 'block') {
@@ -167,6 +172,7 @@
             }
         }
 
+        //botao de x para fechar pagina flutuante
         function fechar() {
             pagsingup.style.display = 'none';
             paglogin.style.display = 'none';
@@ -174,6 +180,8 @@
 
         /* ------------------------------Pesquisa do filme------------------------------------------- */
         const apikey = '86afa933'
+
+        //recebendo do form de pesquisa o nome do filme pesquisado
         const frmpesquisa = document.getElementById("pesquisa")
 
         frmpesquisa.onsubmit = (ev) =>{
@@ -186,8 +194,8 @@
                 return
             }
 
-        /*localiza dados do filme/pesquisa na api */
-        fetch(`https://www.omdbapi.com/?apikey=${apikey}&s=${pesquisa}`)
+        //localiza dados do filme/pesquisa na api
+        fetch(`https://www.omdbapi.com/?apikey=${apikey}&s=${pesquisa}`) //api do omdbapi
             .then(result => result.json())
             .then(json => {
                 if (json.Response === "False") {
@@ -200,8 +208,8 @@
         }
         /*mostra na tela o que pesquisou*/
         const carregalista = (json) =>{
-            const lista = document.getElementById("contpesquisado")
-            const main = document.querySelector("main")
+            const lista = document.getElementById("contpesquisado") //a div do html vai aparecer os filmes
+            const main = document.querySelector("main") //meu query main tem que sumir para aparecer a div
             main.style.display = 'none'
 
             if(json.Response == 'False'){
@@ -209,6 +217,7 @@
                 return
             }
 
+        //criando uma div para cada filme encontrado que vai possuir um img e um h2 e vai possuir class conteudo
             json.Search.forEach(element =>{
                 let item = document.createElement("div")
                 item.classList.add("conteudo")
