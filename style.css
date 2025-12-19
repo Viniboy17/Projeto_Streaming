@@ -219,6 +219,7 @@ main .conteudo{
 
 #contpesquisado>.conteudo:hover{
     background-color: #26282F;
+    cursor: pointer;
 }
 
 /*________________________________________________________________________________________________________*/
