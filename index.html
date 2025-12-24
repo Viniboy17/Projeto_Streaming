@@ -43,11 +43,22 @@
                 <p><a href="#">Ver Mais</a></p>
             </div>
             <hr>
-            <div class="classconteudo">
-                <div class="conteudo"></div>
-                <div class="conteudo"></div>
-                <div class="conteudo"></div>
-                <div class="conteudo"></div>
+            <div class="carrosel">
+                <button onclick="rolar('no_cinema',-1)" class="seta_rolagem"><img src="imagens/seta-esquerda.png" alt="seta_esquerda"></button>
+                <div class="classconteudo">
+                    <div class="conteudo"></div>
+                    <div class="conteudo"></div>
+                    <div class="conteudo"></div>
+                    <div class="conteudo"></div>
+                    <div class="conteudo"></div>
+                    <div class="conteudo"></div>
+                    <div class="conteudo"></div>
+                    <div class="conteudo"></div>
+                    <div class="conteudo"></div>
+                    <div class="conteudo"></div>
+                </div>
+                <button onclick="rolar('no_cinema',1)" class="seta_rolagem"><img src="imagens/seta-direita.png" alt="seta_direita">
+                </button>
             </div>
         </div>
         
@@ -57,11 +68,22 @@
                 <p><a href="#">Ver Mais</a></p>
             </div>
             <hr>
-            <div class="classconteudo">
-                <div class="conteudo"></div>
-                <div class="conteudo"></div>
-                <div class="conteudo"></div>
-                <div class="conteudo"></div>
+            <div class="carrosel">
+                <button onclick="rolar('top_filmes',-1)" class="seta_rolagem"><img src="imagens/seta-esquerda.png" alt="seta_esquerda"></button>
+                <div class="classconteudo">
+                    <div class="conteudo"></div>
+                    <div class="conteudo"></div>
+                    <div class="conteudo"></div>
+                    <div class="conteudo"></div>
+                    <div class="conteudo"></div>
+                    <div class="conteudo"></div>
+                    <div class="conteudo"></div>
+                    <div class="conteudo"></div>
+                    <div class="conteudo"></div>
+                    <div class="conteudo"></div>
+                </div>
+                <button onclick="rolar('top_filmes',1)" class="seta_rolagem"><img src="imagens/seta-direita.png" alt="seta_direita">
+                </button>
             </div>
         </div>
        
@@ -71,11 +93,22 @@
                 <p><a href="#">Ver Mais</a></p>
             </div>
             <hr>
-            <div class="classconteudo">
-                <div class="conteudo"></div>
-                <div class="conteudo"></div>
-                <div class="conteudo"></div>
-                <div class="conteudo"></div>
+            <div class="carrosel">
+                <button onclick="rolar('top_series',-1)" class="seta_rolagem"><img src="imagens/seta-esquerda.png" alt="seta_esquerda"></button>
+                <div class="classconteudo">
+                    <div class="conteudo"></div>
+                    <div class="conteudo"></div>
+                    <div class="conteudo"></div>
+                    <div class="conteudo"></div>
+                    <div class="conteudo"></div>
+                    <div class="conteudo"></div>
+                    <div class="conteudo"></div>
+                    <div class="conteudo"></div>
+                    <div class="conteudo"></div>
+                    <div class="conteudo"></div>
+                </div>
+                <button onclick="rolar('top_series',1)" class="seta_rolagem"><img src="imagens/seta-direita.png" alt="seta_direita">
+                </button>
             </div>
         </div>
         
@@ -85,11 +118,22 @@
                 <p><a href="#">Ver Mais</a></p>
             </div>
             <hr>
-            <div class="classconteudo">
-                <div class="conteudo"></div>
-                <div class="conteudo"></div>
-                <div class="conteudo"></div>
-                <div class="conteudo"></div>
+            <div class="carrosel">
+                <button onclick="rolar('top_animes',-1)" class="seta_rolagem"><img src="imagens/seta-esquerda.png" alt="seta_esquerda"></button>
+                <div class="classconteudo">
+                    <div class="conteudo"></div>
+                    <div class="conteudo"></div>
+                    <div class="conteudo"></div>
+                    <div class="conteudo"></div>
+                    <div class="conteudo"></div>
+                    <div class="conteudo"></div>
+                    <div class="conteudo"></div>
+                    <div class="conteudo"></div>
+                    <div class="conteudo"></div>
+                    <div class="conteudo"></div>
+                </div>
+                <button onclick="rolar('top_animes',1)" class="seta_rolagem"><img src="imagens/seta-direita.png" alt="seta_direita">
+                </button>
             </div>
         </div>
         <br>
@@ -98,13 +142,6 @@
 
     <!--Conteudo pesquisado-->
     <div id="contpesquisado"></div>
-
-
-
-    <!-- Botao para voltar ao topo da pagina-->
-    <a href="#" id="botaotop">
-        <img src="imagens/de-volta-ao-topo.png" alt="">
-    </a>
 
     <!--Pagina de cadastro-->
     <div class="cadastro" id="pagsingup">
@@ -137,16 +174,20 @@
             <input type="submit" value="" id="botlogin">
         </fieldset>
     </div>
+
     
     <script>
-        //Botao no canto do tela para subir ao topo
-        document.getElementById("botaotop").addEventListener("click", function(e){
-            e.preventDefault(); // impede o # de recarregar a página
-            window.scrollTo({
-                top: 0,
-                behavior: "smooth"
+        //Botao para rolar para o lado nos filmes
+        
+        function rolar(id, direcao) {
+            const container = document.querySelector(`#${id} .classconteudo`);
+
+            container.scrollBy({
+                left: direcao * container.clientWidth * 0.5,
+                behavior: 'smooth'
             });
-        });
+        }
+
 
         /*-----------------------Funcionalidade para aparecer e fechar a pagina de login e singup----------------*/
         const pagsingup = document.getElementById("pagsingup");

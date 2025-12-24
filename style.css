@@ -173,20 +173,51 @@ main hr{
 }
 
 /*configuraçao da visualizaçao do conteudo em si */
+.carrosel{
+    width: 90%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
+.seta_rolagem{
+    width: 20px;
+    height: 20px;
+    margin: 20px;
+    background: none;
+    border: none;
+}
+.seta_rolagem>img:hover{
+    background-color: var(--cor03);
+    cursor: pointer;
+}
+.seta_rolagem>img{
+    width: 100%;
+    border: 2px solid var(--cor01);
+    border-radius: 50%;
+    padding: 10px;
+}
 
 main .conteudo{
     width: 200px;
     height: 300px;
     background-color: var(--cor02);
     margin: 0px 10px;
-    padding: 10px; 
+    padding: 10px;
+    flex-shrink: 0;
+    border-radius: 5px;
 }
 .classconteudo{
-    width: 100%;
+    width: 85%;
+    margin: auto;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 20px;
-    flex-wrap: wrap;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+}
+
+.classconteudo::-webkit-scrollbar {
+    height: 8px;
 }
 
 #contpesquisado{
@@ -222,16 +253,6 @@ main .conteudo{
     cursor: pointer;
 }
 
-/*________________________________________________________________________________________________________*/
-/*Botao topo*/
-#botaotop{
-    position:fixed;
-    left: 90%;
-    top: 90%;
-}
-#botaotop>img{
-    width: 50px;
-}
 
 /*________________________________________________________________________________________________________*/
     /* Login e cadastro*/
