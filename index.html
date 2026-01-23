@@ -11,6 +11,7 @@
 </head>
 <body>
     <!-- Cabeçalho da Pagina contendo o icone do site, os botos rapidos-->
+     
     <header>
         <nav>
             <img src="imagens/favicon.ico" alt="filmes Driver">
@@ -18,13 +19,26 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="#">filmes</a></li>
                 <li><a href="#">series</a></li>
-                <li><a href="#">Categorias</a></li>
+                <li><a onclick="categorias()">Categorias</a></li>
             </ul>
             <ul id="acesso">
                 <li id="singup"><a onclick="clicksingup()">Singup</a></li>
                 <li id="login"><a onclick="clicklogin()">Login</a></li>
             </ul>
         </nav>
+        <ul id="icategorias">
+                <li><a href="">Açao</a></li>
+                <li><a href="">Drama</a></li>
+                <li><a href="">Aventura</a></li>
+                <li><a href="">Crime</a></li>
+                <li><a href="">Ficçao Cientifica</a></li>
+                <li><a href="">Comédia</a></li>
+                <li><a href="">Romance</a></li>
+                <li><a href="">Familia</a></li>
+                <li><a href="">Fantasia</a></li>
+                <li><a href="">Horror</a></li>
+                <li><a href="">Guerra</a></li>
+        </ul>
     </header>
 
     <!-- Parte onde vai ficar passando os banes de alguns filmes-->
@@ -37,7 +51,7 @@
 
     <!--Conteudo principal do site-->
     <main>
-        <div id="no_cinema">
+        <div id="no_cinema" class="inicio">
             <div class="nomes">
                 <h2>No Cinema</h2>
                 <p><a href="#">Ver Mais</a></p>
@@ -54,15 +68,13 @@
                     <div class="conteudo"></div>
                     <div class="conteudo"></div>
                     <div class="conteudo"></div>
-                    <div class="conteudo"></div>
-                    <div class="conteudo"></div>
                 </div>
                 <button onclick="rolar('no_cinema',1)" class="seta_rolagem"><img src="imagens/seta-direita.png" alt="seta_direita">
                 </button>
             </div>
         </div>
         
-        <div id="top_filmes">
+        <div id="top_filmes" class="inicio">
             <div class="nomes">
                 <h2>Top Filmes</h2>
                 <p><a href="#">Ver Mais</a></p>
@@ -174,113 +186,6 @@
             <input type="submit" value="" id="botlogin">
         </fieldset>
     </div>
-
-    
-    <script>
-        //Botao para rolar para o lado nos filmes
-        
-        function rolar(id, direcao) {
-            const container = document.querySelector(`#${id} .classconteudo`);
-
-            container.scrollBy({
-                left: direcao * container.clientWidth * 0.5,
-                behavior: 'smooth'
-            });
-        }
-
-
-        /*-----------------------Funcionalidade para aparecer e fechar a pagina de login e singup----------------*/
-        const pagsingup = document.getElementById("pagsingup");
-        const paglogin = document.getElementById("paglogin");
-        const xfechar = document.getElementById("xfechar");
-
-        //aparecer pagina de singup
-        function clicksingup() {
-
-            if (pagsingup.style.display === 'block') {
-                pagsingup.style.display = 'none';
-            } 
-            else {
-                pagsingup.style.display = 'block';
-                paglogin.style.display = 'none';
-            }
-        }
-
-        //aparecer pagina de login
-        function clicklogin() {
-
-            if (paglogin.style.display === 'block') {
-                paglogin.style.display = 'none';
-            } else {
-                paglogin.style.display = 'block';
-                pagsingup.style.display = 'none';
-            }
-        }
-
-        //botao de x para fechar pagina flutuante
-        function fechar() {
-            pagsingup.style.display = 'none';
-            paglogin.style.display = 'none';
-        }
-
-        /* ------------------------------Pesquisa do filme------------------------------------------- */
-        const apikey = '86afa933'
-
-        //recebendo do form de pesquisa o nome do filme pesquisado
-        const frmpesquisa = document.getElementById("pesquisa")
-
-        frmpesquisa.onsubmit = (ev) =>{
-            ev.preventDefault()
-
-            const pesquisa = ev.target.pesquisar.value.trim()
-
-            ev.target.pesquisar.blur()/*em cll ele tira o teclado da tela pois o formulario e o que estava com foco durante a pesquisa. ao clicar em enter no cll o form perde o foco e o teclado some*/
-
-
-            if(pesquisa ===""){
-                alert('Preencha o campo!')
-                return
-            }
-
-        //localiza dados do filme/pesquisa na api
-        fetch(`https://www.omdbapi.com/?apikey=${apikey}&s=${pesquisa}`) //api do omdbapi
-            .then(result => result.json())
-            .then(json => {
-                if (json.Response === "False") {
-                    alert("Nenhum filme encontrado!")
-                    return
-                }
-                carregalista(json)
-            })
-            .catch(err => console.error(err))
-        }
-        /*mostra na tela o que pesquisou*/
-        const carregalista = (json) =>{
-            const lista = document.getElementById("contpesquisado") //a div do html vai aparecer os filmes
-            const main = document.querySelector("main") //meu query main tem que sumir para aparecer a div
-            main.style.display = 'none'
-
-            lista.innerHTML=""
-
-            if(json.Response == 'False'){
-                alert('Nenhum filme encontrado :(')
-                return
-            }
-
-        //criando uma div para cada filme encontrado que vai possuir um img e um h2 e vai possuir class conteudo
-            json.Search.forEach(element =>{
-                let item = document.createElement("div")
-                item.classList.add("conteudo")
-
-                item.innerHTML =`
-                <img src="${element.Poster !== "N/A" ? element.Poster : "back"}">
-                <h2>${element.Title}<h2> 
-                `
-                lista.appendChild(item)
-            })
-        }
-
-
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>

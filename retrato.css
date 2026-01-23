@@ -7,7 +7,7 @@
     }
 
     main>div{
-        margin-bottom: 45px;
+        margin-bottom: 15px;
     }
 
     #pesquisa{
@@ -28,6 +28,10 @@
         margin-left: 0px;
         width: 100%;
     }
+    #icategorias{
+        flex-wrap: wrap;
+        width: 90%;
+    }
     #acesso{
         width: 75%;
         margin: 0px;
@@ -40,15 +44,20 @@
     .cadastro>fieldset{
         width: 225px;
     }
-
+    .lds-dual-ring:after{
+        width: 50px;
+        height: 50px;
+        margin: 85px 0px 0px -120px;
+    }
     .classconteudo{
         justify-content: flex-start;
+        width: 100%;
+        gap:0px;
     }
 
     main .conteudo{
-        width: 130px;
-        height: 195px;
-        margin: 0px;
+        width: 120px;
+        height: 165px;
     }
 
     .seta_rolagem{
@@ -56,8 +65,66 @@
     }
 
     #contpesquisado>.conteudo{
-    width: 147px;
-    height: 275px;
-    margin: 0px;
+    width: 130px;
+    height: 240px;
+    margin: 0px 5px 100px 5px;
     }
-}
+    #contpesquisado>.conteudo>.overlay>h2 {
+        margin-top: 255px;
+    }
+
+/*--------------------------*/
+    #headerplay{
+        position: unset;
+    }
+    #play{
+        width: 95%;
+        height: 200px;
+        left: 54%;
+        top: 36%;
+    }
+
+    #play>video {
+    width: 99%;
+    }
+
+    #sinopse{
+        width: 100%;
+        top: 8%;
+    }
+    }
+
+    #titulofilme{
+    text-align: center;
+    width: 100%;
+    top: -30%;
+    left: 4%;
+    position: relative;
+    }
+
+    main h2{
+        text-align:center;
+    }
+
+    #resto{
+        margin-top: 240px;
+    }
+
+    #titulossemelhantes{
+        width: 100%;
+        margin: 50px 0px 13px 0px;
+        position: relative;
+        top: 6%;
+    }
+    
+    #classconteudoplay{
+        margin: 0px;
+        position: relative;
+        top: 8%;
+        left: 3%;
+        width: 100%;
+    }
+    main>#voltar{
+    position: relative;
+    top: -3%;
+    }

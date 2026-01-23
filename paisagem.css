@@ -19,6 +19,13 @@
         margin-left: 55px;
     }
 
+     #icategorias{
+        flex-wrap: wrap;
+        width: 70%;
+        position: relative;
+        left: 14%;
+    }
+
     #acesso{
         margin-right: 0px;
     }
@@ -30,10 +37,64 @@
     main .conteudo{
         width: 135px;
         height: 200px;
-        margin: 0px;
     }
 
     .seta_rolagem{
         display: none;
     }
 }
+
+/*--------------------------
+    #headerplay{
+        position: unset;
+    }
+    #play{
+        width: 45%;
+        height: 206px;
+        left: 70%;
+        top: 30%;
+    }
+
+    #play>video {
+    width: 99%;
+    }
+
+    #sinopse{
+        width: 90%;
+        top: 8%;
+    }
+
+    #titulofilme{
+    font-size: small;
+    width: 49%;
+    top: -76%;
+    left: 4%;
+    position: relative;
+    }
+
+    main h2{
+        text-align:center;
+    }
+
+    #resto{
+        margin-top: 240px;
+    }
+
+    #titulossemelhantes{
+        margin: 30px 0px 13px 0px;
+        position: relative;
+        top: 9%;
+    }
+    
+    #classconteudoplay{
+        position: relative;
+        top: 26%;
+    }
+    main>#voltar{
+    position: relative;
+    top: -37%;
+    left: -3%;
+    }
+    */
+
+    
