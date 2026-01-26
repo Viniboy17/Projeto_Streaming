@@ -84,7 +84,7 @@ let m3uItens = [];
 /* ================= LEITURA M3U ================= */
 
 const statusDiv = document.getElementById("status");
-const NOME_DO_ARQUIVO = "http://streams4k.xyz/get.php?username=gold07920&password=89853504&type=m3u_plus&output=mpegts";
+const NOME_DO_ARQUIVO = "listam3u.m3u";
 
 /* ================= CARREGAR M3U ================= */
 function normalizarTexto(texto) {

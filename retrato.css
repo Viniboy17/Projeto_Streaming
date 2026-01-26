@@ -76,11 +76,12 @@
 /*--------------------------*/
     #headerplay{
         position: unset;
+        width: 100vw;
     }
     #play{
-        width: 95%;
+        width: 94%;
         height: 200px;
-        left: 54%;
+        left: 49%;
         top: 36%;
     }
 
@@ -89,16 +90,16 @@
     }
 
     #sinopse{
-        width: 100%;
+        width: 90%;
         top: 8%;
-    }
+        left: 5%;
     }
 
     #titulofilme{
     text-align: center;
     width: 100%;
     top: -30%;
-    left: 4%;
+    left: 0%;
     position: relative;
     }
 
@@ -122,9 +123,14 @@
         position: relative;
         top: 8%;
         left: 3%;
-        width: 100%;
+        width: 93%;
     }
     main>#voltar{
     position: relative;
-    top: -3%;
+    top: -29%;
     }
+
+
+    }
+
+    
