@@ -84,7 +84,7 @@ let m3uItens = [];
 /* ================= LEITURA M3U ================= */
 
 const statusDiv = document.getElementById("status");
-const NOME_DO_ARQUIVO = "listam3u.m3u";
+const NOME_DO_ARQUIVO = "lista.m3u";
 
 /* ================= CARREGAR M3U ================= */
 function normalizarTexto(texto) {

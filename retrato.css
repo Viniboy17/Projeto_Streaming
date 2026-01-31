@@ -74,63 +74,47 @@
     }
 
 /*--------------------------*/
-    #headerplay{
-        position: unset;
-        width: 100vw;
-    }
-    #play{
-        width: 94%;
-        height: 200px;
-        left: 49%;
-        top: 36%;
+    #mainplay{
+    height: 100%;
+    margin: 30px 0px;
+    display: flex;
+    flex-flow: column nowrap;
     }
 
-    #play>video {
-    width: 99%;
+    #voltar{
+    margin: 0px 0px 20px 10px;
+    order: -2;
     }
 
     #sinopse{
         width: 90%;
-        top: 8%;
-        left: 5%;
+        align-self: center;
     }
 
+    #play{
+        margin-top: 22px;
+        width: 330px;
+        height: 180px;
+        order: -1;
+    }
     #titulofilme{
-    text-align: center;
-    width: 100%;
-    top: -30%;
-    left: 0%;
-    position: relative;
+        order: -1;
+        margin: 0px;
+        width: 92%;
     }
-
-    main h2{
-        text-align:center;
-    }
-
-    #resto{
-        margin-top: 240px;
+    #titulofilme>h2{
+        text-align: center;
+        margin: 0px 10px;
     }
 
     #titulossemelhantes{
-        width: 100%;
-        margin: 50px 0px 13px 0px;
-        position: relative;
-        top: 6%;
+        width: 92%;
     }
-    
     #classconteudoplay{
-        margin: 0px;
-        position: relative;
-        top: 8%;
-        left: 3%;
-        width: 93%;
-    }
-    main>#voltar{
-    position: relative;
-    top: -29%;
+        width: 90%;
+        margin-bottom: 0px;
     }
 
-
-    }
+}
 
     

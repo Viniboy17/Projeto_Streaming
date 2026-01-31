@@ -16,7 +16,7 @@
     }
 
     #categoria{
-        margin-left: 55px;
+        margin-left: 20px;
     }
 
      #icategorias{
@@ -28,6 +28,7 @@
 
     #acesso{
         margin-right: 0px;
+        margin-left: -16px;
     }
 
     .classconteudo{
@@ -42,59 +43,80 @@
     .seta_rolagem{
         display: none;
     }
-}
 
-/*--------------------------
-    #headerplay{
-        position: unset;
+    /*---------------------------------------*/
+    #mainplay{
+        margin-top: 20px;
+        justify-content: space-evenly;
+        height: 100%;
     }
     #play{
-        width: 45%;
-        height: 206px;
+        order: -1;
+        width: 320px;
+        height: 180px;
+        margin: 0px;
+        align-self: flex-start;
+    }
+    #voltar{
+        order: -2;
+    }
+    #titulofilme{
+        order: -2;
+        width: 34%;
+        align-self: flex-start;
+    }
+    #sinopse{
+    width: 85%;
+    margin-bottom: 30px;
+    }
+
+/*
+
+    #mainplay{
+        overflow-x: hidden;
+    }
+    #headerplay{
+        width: 95%;
+    }
+    #headerplay nav{
+        width: 100%;
+    }
+    #play{
+        width: 340px;
+        height: 195px;
         left: 70%;
         top: 30%;
-    }
+        }
 
-    #play>video {
-    width: 99%;
-    }
-
-    #sinopse{
-        width: 90%;
-        top: 8%;
+    main #voltar{
+        top: -58%;
+        left: 3%;
     }
 
     #titulofilme{
-    font-size: small;
-    width: 49%;
-    top: -76%;
-    left: 4%;
-    position: relative;
+        margin: 0px;
+        width: 40%;
+        left: 7%;
+        top: -70%;
     }
 
-    main h2{
-        text-align:center;
-    }
-
-    #resto{
-        margin-top: 240px;
+    #sinopse{
+    width: 90%;
+    left: 6%;
+    top: -48%;
     }
 
     #titulossemelhantes{
-        margin: 30px 0px 13px 0px;
-        position: relative;
-        top: 9%;
+    top: -56%;
+    left: 6%;
     }
-    
+
     #classconteudoplay{
-        position: relative;
-        top: 26%;
-    }
-    main>#voltar{
+    top: -15%;
+    left: 1%;
     position: relative;
-    top: -37%;
-    left: -3%;
     }
     */
+    }
 
     
