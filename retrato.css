@@ -74,11 +74,27 @@
     }
 
 /*--------------------------*/
+<<<<<<< HEAD
     #mainplay{
     height: 100%;
     margin: 30px 0px;
     display: flex;
     flex-flow: column nowrap;
+=======
+
+    #mainplay{
+        overflow-x: hidden;
+    }
+    #headerplay{
+        position: unset;
+        width: 92%;
+    }
+    #play{
+        width: 94%;
+        height: 200px;
+        left: 49%;
+        top: 39%;
+>>>>>>> ef7c102720a1c056347f2c27f853b265d76dd7b8
     }
 
     #voltar{

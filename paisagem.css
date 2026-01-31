@@ -43,6 +43,60 @@
     .seta_rolagem{
         display: none;
     }
+<<<<<<< HEAD
+=======
+
+
+
+
+
+    #mainplay{
+        overflow-x: hidden;
+    }
+    #headerplay{
+        width: 95%;
+    }
+    #headerplay nav{
+        width: 100%;
+    }
+    #play{
+        width: 340px;
+        height: 195px;
+        left: 70%;
+        top: 30%;
+        }
+
+    main #voltar{
+        top: -58%;
+        left: 3%;
+    }
+
+    #titulofilme{
+        margin: 0px;
+        width: 40%;
+        left: 7%;
+        top: -70%;
+    }
+
+    #sinopse{
+    width: 90%;
+    left: 6%;
+    top: -48%;
+    }
+
+    #titulossemelhantes{
+    top: -56%;
+    left: 6%;
+    }
+
+    #classconteudoplay{
+    top: -15%;
+    left: 1%;
+    position: relative;
+    }
+    }
+
+>>>>>>> ef7c102720a1c056347f2c27f853b265d76dd7b8
 
     /*---------------------------------------*/
     #mainplay{
